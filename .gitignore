@@ -1,0 +1,17 @@
+# Dependencies / tooling
+node_modules/
+.playwright-mcp/
+
+# Local archives
+ggs.zip
+
+# QA / review screenshots (not part of the site)
+# Only root-level — images/ assets are part of the site
+/*.png
+
+# Vercel
+.vercel/
+
+# OS / editor
+Thumbs.db
+.DS_Store

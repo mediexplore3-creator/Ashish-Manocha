@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories & Notes — Ashish Manocha</title>
+    <meta name="description" content="Ashish Manocha creates bold digital experiences, social content, video, and AI-powered creative tools for ambitious brands.">
+    <meta name="keywords" content="Creative studio, UI/UX design, web development, social media management, video editing, AI tool tutoring, Ashish Manocha">
+    <meta name="author" content="Ashish Manocha">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563eb'/><text x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'>A</text></svg>">
+
+    <!-- Fonts (self-hosted, no external requests) -->
+    <link rel="stylesheet" href="fonts.css">
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-dark dark:text-slate-200 transition-colors duration-500 selection:bg-primary selection:text-white overflow-x-hidden standalone-page">
+    <div class="fixed inset-0 z-[1] bg-noise pointer-events-none opacity-40 mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-0 bg-grid-pattern pointer-events-none"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none opacity-50 dark:opacity-20 z-0"></div>
+    <div id="preloader" class="opening-screen fixed inset-0 z-[9999] bg-slate-50 dark:bg-dark flex items-center justify-center" aria-label="Loading Ashish Manocha creative studio">
+        <div class="opening-splash">
+            <div class="opening-splash-top"><span>AM / 2026</span><span>Independent Creative Studio</span></div>
+            <div class="opening-splash-center"><span class="opening-splash-index">01</span><div class="opening-splash-name"><span>ASHISH</span><span>MANOCHA</span></div><div class="opening-splash-mark"><span>AM</span></div></div>
+            <div class="opening-splash-bottom"><span>Digital / Content / AI</span><div class="opening-meter"><span id="opening-meter-fill"></span></div><span id="opening-percent">0%</span></div>
+        </div>
+    </div>
+        <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-6">
+        <nav class="bg-white/70 dark:bg-surface/70 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full px-6 py-3 flex items-center gap-8 shadow-sm transition-all duration-300 w-full max-w-4xl justify-between md:justify-start reveal-on-scroll">
+            
+            <a href="index.html" class="text-xl font-bold font-display tracking-tight text-slate-900 dark:text-white hoverable magnetic-btn focus:outline-none relative z-20">
+                Ashish<span class="text-primary">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium ml-auto relative z-20" id="desktop-menu">
+                <a href="index.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Home</a>
+                <a href="about.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">About</a>
+                <a href="work.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Work</a>
+                <a href="services.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Services</a>
+                <a href="process.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Process</a>
+                <a href="technologies.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Tech</a>
+                <a href="stories.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Stories</a>
+                <a href="contact.html" class="px-5 py-2 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full font-bold text-xs hover:scale-105 transition-transform hoverable magnetic-btn">Hire Me</a>
+            </div>
+
+            <div class="flex items-center gap-3 md:ml-4 border-l border-slate-200 dark:border-white/10 pl-4 md:pl-6 relative z-20">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden text-slate-900 dark:text-white p-1 hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[70] bg-white/95 dark:bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-300">
+        <a href="index.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Home</a>
+        <a href="about.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">About</a>
+        <a href="services.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Services</a>
+        <a href="process.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Process</a>
+        <a href="technologies.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Tech</a>
+        <a href="work.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Work</a>
+        <a href="stories.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Stories</a>
+        <a href="contact.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Contact</a>
+        <button id="close-menu" aria-label="Close menu" class="absolute top-8 right-8 text-slate-500 hover:text-black dark:hover:text-white hoverable">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+
+
+    <main class="relative z-10">
+        <section class="page-hero"><div class="container mx-auto px-6 max-w-6xl"><p class="eyebrow text-primary">Ashish Manocha studio</p><h1 class="font-display text-5xl md:text-7xl font-bold text-slate-900 dark:text-white max-w-4xl">Stories & Notes</h1><p class="page-hero-copy">Ideas, lessons, and observations from the creative technology field.</p></div></section>
+        <section id="writing" class="section-spy py-24 bg-slate-50 dark:bg-[#080808]">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 reveal-on-scroll">
+                <h2 class="font-display text-4xl font-bold text-slate-900 dark:text-white">
+                    Writing<br>Latest<span class="text-primary">.</span>
+                </h2>
+                <a href="stories.html" class="text-slate-500 text-sm font-bold hover:text-primary transition-colors hoverable magnetic-btn">READ ALL ARTICLES →</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <a href="stories.html" class="group block hoverable reveal-on-scroll">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" decoding="async" loading="lazy">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Development</p>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">Designing digital products people want to return to</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">Exploring a new paradigm of server-side data fetching to enhance performance and user experience.</p>
+                </a>
+
+                <!-- Article 2 -->
+                <a href="stories.html" class="group block hoverable reveal-on-scroll delay-100">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" decoding="async" loading="lazy">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Design</p>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">The Psychology of Micro-Interactions</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">How small animations and feedback can significantly increase user engagement in modern applications.</p>
+                </a>
+
+                <!-- Article 3 -->
+                <a href="stories.html" class="group block hoverable reveal-on-scroll delay-200">
+                    <div class="h-64 rounded-2xl overflow-hidden mb-6 relative">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" decoding="async" loading="lazy">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <p class="text-primary text-xs font-bold uppercase tracking-wider mb-2">Career</p>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-primary transition-colors">From Junior to Senior: A 3-Year Journey</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed line-clamp-2">Lessons learned, mistakes made, and key skills that helped me advance my career in the tech industry.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<section id="testimonials" class="section-spy py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-6xl relative z-10">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-16 text-center reveal-on-scroll">
+                Client Stories<span class="text-primary">.</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 dark:bg-surface border border-slate-200 dark:border-white/10 p-8 rounded-2xl relative reveal-on-scroll">
+                    <div class="text-primary text-4xl absolute top-6 right-8 opacity-20"><i class="fas fa-quote-right"></i></div>
+                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-6 italic">
+                        “Ashish brings strategy and creativity together. He doesn’t just make things look good—he makes them work for the business. 
+                        the business side and user experience. The final result far exceeded our expectations.”
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" loading="lazy" width="200" height="200" class="w-full h-full object-cover" alt="Client 1" decoding="async">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Rohan Mehta</h4>
+                            <p class="text-xs text-slate-500 uppercase tracking-wider">CEO, Tech.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 dark:bg-surface border border-slate-200 dark:border-white/10 p-8 rounded-2xl relative reveal-on-scroll delay-100">
+                    <div class="text-primary text-4xl absolute top-6 right-8 opacity-20"><i class="fas fa-quote-right"></i></div>
+                    <p class="text-slate-600 dark:text-slate-300 text-lg leading-relaxed mb-6 italic">
+                        “Ashish understood the brief quickly and turned our rough idea into content we were proud to share. 
+                        understanding of user needs. Our app’s user engagement increased significantly after his redesign.”
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-slate-300 rounded-full overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" loading="lazy" width="200" height="200" class="w-full h-full object-cover" alt="Client 2" decoding="async">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Priya Kapoor</h4>
+                            <p class="text-xs text-slate-500 uppercase tracking-wider">Artistry</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="page-rich-section"><div class="container mx-auto px-6 max-w-6xl"><div class="page-section-heading"><p class="eyebrow text-primary">Notes from the studio</p><h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Useful thoughts for<br><span class="home-gradient-text">the next move.</span></h2></div><div class="page-note-grid"><article><span>01 / Clarity</span><h3>The edit is where the idea becomes honest.</h3><p>A strong first draft gets you into the room. The right edit makes the room worth staying in.</p><a href="contact.html">Talk through an idea <i class="fas fa-arrow-right"></i></a></article><article><span>02 / Systems</span><h3>Consistency is a creative advantage.</h3><p>When the rules are clear, the team has more freedom to make interesting choices.</p><a href="services.html">See the systems <i class="fas fa-arrow-right"></i></a></article><article><span>03 / AI</span><h3>The tool is only as useful as the question.</h3><p>Better prompts start with better thinking. The shortcut is understanding what you are asking for.</p><a href="technologies.html">Learn the tools <i class="fas fa-arrow-right"></i></a></article></div></div></section>
+    </main>
+    <footer class="standalone-footer"><span>© <span id="year">2026</span> Ashish Manocha</span><div><a href="contact.html">Start a project</a><a href="index.html">Back home</a></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

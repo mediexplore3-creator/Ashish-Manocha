@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ashish — Ashish Manocha</title>
+    <meta name="description" content="Ashish Manocha creates bold digital experiences, social content, video, and AI-powered creative tools for ambitious brands.">
+    <meta name="keywords" content="Creative studio, UI/UX design, web development, social media management, video editing, AI tool tutoring, Ashish Manocha">
+    <meta name="author" content="Ashish Manocha">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563eb'/><text x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'>A</text></svg>">
+
+    <!-- Fonts (self-hosted, no external requests) -->
+    <link rel="stylesheet" href="fonts.css">
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-dark dark:text-slate-200 transition-colors duration-500 selection:bg-primary selection:text-white overflow-x-hidden standalone-page">
+    <div class="fixed inset-0 z-[1] bg-noise pointer-events-none opacity-40 mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-0 bg-grid-pattern pointer-events-none"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none opacity-50 dark:opacity-20 z-0"></div>
+    <div id="preloader" class="opening-screen fixed inset-0 z-[9999] bg-slate-50 dark:bg-dark flex items-center justify-center" aria-label="Loading Ashish Manocha creative studio">
+        <div class="opening-splash">
+            <div class="opening-splash-top"><span>AM / 2026</span><span>Independent Creative Studio</span></div>
+            <div class="opening-splash-center"><span class="opening-splash-index">01</span><div class="opening-splash-name"><span>ASHISH</span><span>MANOCHA</span></div><div class="opening-splash-mark"><span>AM</span></div></div>
+            <div class="opening-splash-bottom"><span>Digital / Content / AI</span><div class="opening-meter"><span id="opening-meter-fill"></span></div><span id="opening-percent">0%</span></div>
+        </div>
+    </div>
+        <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-6">
+        <nav class="bg-white/70 dark:bg-surface/70 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full px-6 py-3 flex items-center gap-8 shadow-sm transition-all duration-300 w-full max-w-4xl justify-between md:justify-start reveal-on-scroll">
+            
+            <a href="index.html" class="text-xl font-bold font-display tracking-tight text-slate-900 dark:text-white hoverable magnetic-btn focus:outline-none relative z-20">
+                Ashish<span class="text-primary">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium ml-auto relative z-20" id="desktop-menu">
+                <a href="index.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Home</a>
+                <a href="about.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">About</a>
+                <a href="work.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Work</a>
+                <a href="services.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Services</a>
+                <a href="process.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Process</a>
+                <a href="technologies.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Tech</a>
+                <a href="stories.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Stories</a>
+                <a href="contact.html" class="px-5 py-2 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full font-bold text-xs hover:scale-105 transition-transform hoverable magnetic-btn">Hire Me</a>
+            </div>
+
+            <div class="flex items-center gap-3 md:ml-4 border-l border-slate-200 dark:border-white/10 pl-4 md:pl-6 relative z-20">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden text-slate-900 dark:text-white p-1 hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[70] bg-white/95 dark:bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-300">
+        <a href="index.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Home</a>
+        <a href="about.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">About</a>
+        <a href="services.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Services</a>
+        <a href="process.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Process</a>
+        <a href="technologies.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Tech</a>
+        <a href="work.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Work</a>
+        <a href="stories.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Stories</a>
+        <a href="contact.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Contact</a>
+        <button id="close-menu" aria-label="Close menu" class="absolute top-8 right-8 text-slate-500 hover:text-black dark:hover:text-white hoverable">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+
+
+    <main class="relative z-10">
+        <section class="page-hero"><div class="container mx-auto px-6 max-w-6xl"><p class="eyebrow text-primary">Ashish Manocha studio</p><h1 class="font-display text-5xl md:text-7xl font-bold text-slate-900 dark:text-white max-w-4xl">About Ashish</h1><p class="page-hero-copy">A creative partner who turns ambitious ideas into useful, beautiful experiences.</p></div></section>
+        <section id="about" class="section-spy py-20 bg-white/50 dark:bg-white/5 border-y border-slate-200 dark:border-white/5 backdrop-blur-sm relative z-10">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="font-display text-4xl font-bold text-slate-900 dark:text-white mb-12 reveal-on-scroll">My Arsenal <span class="text-primary">.</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[500px]">
+                
+                <!-- Card 1 -->
+                <div class="bento-card spotlight-card col-span-1 md:col-span-2 bg-slate-100 dark:bg-surface border border-slate-200 dark:border-white/10 rounded-3xl p-8 flex flex-col justify-between overflow-hidden relative group hoverable reveal-on-scroll">
+                    <div class="spotlight-overlay"></div>
+                    <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+                    <div class="z-10">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Main Technologies</h3>
+                        <p class="text-slate-500 text-sm">Tools I use to create digital products.</p>
+                    </div>
+                    <div class="absolute bottom-8 left-0 right-0 w-full overflow-hidden">
+                        <div class="flex gap-8 animate-marquee whitespace-nowrap opacity-50 group-hover:opacity-100 transition-opacity">
+                            <span class="text-5xl font-display font-bold text-slate-300 dark:text-slate-700">REACT NEXTJS TAILWIND TYPESCRIPT FIGMA WEBGL GSAP FIREBASE HTML CSS C JAVA</span>
+                            <span class="text-5xl font-display font-bold text-slate-300 dark:text-slate-700">REACT NEXTJS TAILWIND TYPESCRIPT FIGMA WEBGL GSAP FIREBASE HTML CSS C JAVA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bento-card spotlight-card col-span-1 bg-slate-900 text-white rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden hoverable reveal-on-scroll delay-100">
+                    <div class="spotlight-overlay"></div>
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary blur-3xl opacity-30 rounded-full"></div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-2xl animate-spin-slow">
+                            🌍
+                        </div>
+                        <h3 class="text-xl font-bold mb-1">Based in</h3>
+                        <p class="text-slate-400">India</p>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Local Time</p>
+                        <p id="local-time" class="text-3xl font-display font-bold font-mono">00:00</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bento-card spotlight-card col-span-1 bg-white dark:bg-surface border border-slate-200 dark:border-white/10 rounded-3xl p-8 flex flex-col justify-center gap-6 hoverable reveal-on-scroll delay-200">
+                    <div class="spotlight-overlay"></div>
+                    <div class="relative z-10">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 text-xs font-bold uppercase tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Open for Projects
+                        </span>
+                    </div>
+                    <div class="flex gap-4 text-2xl text-slate-600 dark:text-slate-400 relative z-10">
+                        <a href="https://github.com/" class="hover:text-primary transition-colors hover:scale-110 transform"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/" class="hover:text-primary transition-colors hover:scale-110 transform"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/" class="hover:text-primary transition-colors hover:scale-110 transform"><i class="fab fa-twitter"></i></a>
+                        <a href="https://dribbble.com/" class="hover:text-primary transition-colors hover:scale-110 transform"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bento-card spotlight-card col-span-1 md:col-span-2 bg-gradient-to-br from-primary to-secondary text-white rounded-3xl p-8 flex flex-col justify-center relative overflow-hidden hoverable reveal-on-scroll delay-300">
+                    <div class="spotlight-overlay"></div>
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-6xl text-white/10"></i>
+                    <h3 class="text-2xl md:text-3xl font-display font-bold leading-tight relative z-10 max-w-lg">
+                        "Design is not just what it looks like and feels like. Design is how it works."
+                    </h3>
+                    <p class="mt-4 text-white/80 text-sm font-mono relative z-10">— Ashish Manocha</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+
+<section id="experience" class="section-spy py-24 bg-slate-50 dark:bg-[#080808]">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-16 text-center reveal-on-scroll">
+                Experience<span class="text-primary">.</span>
+            </h2>
+
+            <div class="relative border-l border-slate-200 dark:border-white/10 ml-4 md:ml-10 space-y-12">
+                
+                <!-- Item 1 -->
+                <div class="relative pl-8 md:pl-12 group reveal-on-scroll">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors ring-4 ring-transparent group-hover:ring-primary/20"></span>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center mb-2">
+                        <h3 class="text-xl font-bold font-display text-slate-900 dark:text-white group-hover:text-primary transition-colors"> Frontend Developer</h3>
+                        <span class="text-xs font-bold px-2 py-1 rounded bg-slate-200 dark:bg-white/10 text-slate-600 dark:text-slate-300 w-fit">2024</span>
+                    </div>
+                    <p class="text-primary font-medium mb-2">Tech</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-2xl">
+                       Leading a team of 5 frontend developers in building a SaaS platform. Implemented a micro-frontend architecture and improved website loading performance by 40%.
+                    </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="relative pl-8 md:pl-12 group reveal-on-scroll delay-100">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors ring-4 ring-transparent group-hover:ring-primary/20"></span>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center mb-2">
+                        <h3 class="text-xl font-bold font-display text-slate-900 dark:text-white group-hover:text-primary transition-colors">UI/UX Designer</h3>
+                        <span class="text-xs font-bold px-2 py-1 rounded bg-slate-200 dark:bg-white/10 text-slate-600 dark:text-slate-300 w-fit">2021 - 2023</span>
+                    </div>
+                    <p class="text-primary font-medium mb-2">Creative Studio </p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-2xl">
+                      Turning complex ideas into clear, memorable experiences. 
+                    </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="relative pl-8 md:pl-12 group reveal-on-scroll delay-200">
+                    <span class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 group-hover:bg-primary transition-colors ring-4 ring-transparent group-hover:ring-primary/20"></span>
+                    <div class="flex flex-col sm:flex-row gap-2 sm:items-center mb-2">
+                        <h3 class="text-xl font-bold font-display text-slate-900 dark:text-white group-hover:text-primary transition-colors">Web Developer </h3>
+                        <span class="text-xs font-bold px-2 py-1 rounded bg-slate-200 dark:bg-white/10 text-slate-600 dark:text-slate-300 w-fit">2024 - 2026</span>
+                    </div>
+                    <p class="text-primary font-medium mb-2">Web</p>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-2xl">
+                        Building digital products that make the work feel simpler. 
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Work -->
+<section class="page-rich-section"><div class="container mx-auto px-6 max-w-6xl"><div class="page-image-panel"><div class="page-image-panel-media"><img src="images/photo1.jpg" alt="Ashish Manocha creative studio portrait" loading="lazy" decoding="async"></div><div class="page-image-panel-copy"><p class="eyebrow text-primary">The person behind the pixels</p><h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Curious by default.<br><span class="home-gradient-text">Precise by choice.</span></h2><p>I work at the intersection of visual taste, practical technology, and the tiny decisions that make a product feel easy. That means asking better questions before opening the design file—and staying close enough to the details to make the last 10% count.</p><div class="page-stat-row"><div><strong>01</strong><span>Clear thinking</span></div><div><strong>02</strong><span>Useful craft</span></div><div><strong>03</strong><span>Human output</span></div></div></div></div></div></section><section class="page-rich-section page-rich-muted"><div class="container mx-auto px-6 max-w-6xl"><p class="eyebrow text-primary">What clients get</p><div class="page-card-grid"><article><span>01</span><h3>A second brain</h3><p>Someone who can zoom out to the business goal and zoom in to the headline, spacing, or frame that makes it land.</p></article><article><span>02</span><h3>A sharper story</h3><p>Ideas shaped into language, visuals, and experiences that are easier to understand and harder to forget.</p></article><article><span>03</span><h3>A finished feeling</h3><p>Not just a good concept—a polished, launch-ready system that gives the next decision somewhere to go.</p></article></div></div></section>
+    </main>
+    <footer class="standalone-footer"><span>© <span id="year">2026</span> Ashish Manocha</span><div><a href="contact.html">Start a project</a><a href="index.html">Back home</a></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>

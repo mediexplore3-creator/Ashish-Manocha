@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Manocha — Creative Digital Studio</title>
+    <meta name="description" content="Ashish Manocha creates bold digital experiences, social content, video, and AI-powered creative tools for ambitious brands.">
+    <meta name="keywords" content="Creative studio, UI/UX design, web development, social media management, video editing, AI tool tutoring, Ashish Manocha">
+    <meta name="author" content="Ashish Manocha">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563eb'/><text x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'>A</text></svg>">
+
+    <!-- Fonts (self-hosted, no external requests) -->
+    <link rel="stylesheet" href="fonts.css">
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-dark dark:text-slate-200 transition-colors duration-500 selection:bg-primary selection:text-white overflow-x-hidden">
+
+    <!-- [NEW] Noise Texture Overlay -->
+    <div class="fixed inset-0 z-[1] bg-noise pointer-events-none opacity-40 mix-blend-overlay"></div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="opening-screen fixed inset-0 z-[9999] bg-slate-50 dark:bg-dark flex items-center justify-center" aria-label="Loading Ashish Manocha creative studio">
+        <div class="opening-splash">
+            <div class="opening-splash-top"><span>AM / 2026</span><span>Independent Creative Studio</span></div>
+            <div class="opening-splash-center"><span class="opening-splash-index">01</span><div class="opening-splash-name"><span>ASHISH</span><span>MANOCHA</span></div><div class="opening-splash-mark"><span><img src="./images/photo1.jpg" alt="icon" class="splash-icon"></span></div></div>
+            <div class="opening-splash-bottom"><span>Digital / Content / AI</span><div class="opening-meter"><span id="opening-meter-fill"></span></div><span id="opening-percent">0%</span></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-0 bg-grid-pattern pointer-events-none"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none opacity-50 dark:opacity-20 z-0"></div>
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-6">
+        <nav class="bg-white/70 dark:bg-surface/70 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full px-6 py-3 flex items-center gap-8 shadow-sm transition-all duration-300 w-full max-w-4xl justify-between md:justify-start reveal-on-scroll">
+            
+            <a href="index.html" class="text-xl font-bold font-display tracking-tight text-slate-900 dark:text-white hoverable magnetic-btn focus:outline-none relative z-20">
+                Ashish<span class="text-primary">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium ml-auto relative z-20" id="desktop-menu">
+                <a href="index.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Home</a>
+                <a href="about.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">About</a>
+                <a href="work.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Work</a>
+                <a href="services.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Services</a>
+                <a href="process.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Process</a>
+                <a href="technologies.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Tech</a>
+                <a href="stories.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Stories</a>
+                <a href="contact.html" class="px-5 py-2 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full font-bold text-xs hover:scale-105 transition-transform hoverable magnetic-btn">Hire Me</a>
+            </div>
+
+            <div class="flex items-center gap-3 md:ml-4 border-l border-slate-200 dark:border-white/10 pl-4 md:pl-6 relative z-20">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden text-slate-900 dark:text-white p-1 hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[70] bg-white/95 dark:bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-300">
+        <a href="index.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Home</a>
+        <a href="about.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">About</a>
+        <a href="services.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Services</a>
+        <a href="process.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Process</a>
+        <a href="technologies.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Tech</a>
+        <a href="work.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Work</a>
+        <a href="stories.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Stories</a>
+        <a href="contact.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Contact</a>
+        <button id="close-menu" aria-label="Close menu" class="absolute top-8 right-8 text-slate-500 hover:text-black dark:hover:text-white hoverable">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 home-main">
+        <section id="home" class="home-hero section-spy relative min-h-screen flex items-center overflow-hidden pt-32 pb-20">
+            <div class="home-hero-glow home-hero-glow-one"></div><div class="home-hero-glow home-hero-glow-two"></div><div class="home-hero-grid"></div>
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="home-hero-meta reveal-on-scroll"><span>Independent creative studio</span><span>Digital / Content / AI</span><span>Based in India · Working worldwide</span></div>
+                <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_.95fr] gap-12 lg:gap-20 items-center">
+                    <div class="home-hero-copy">
+                        <p class="eyebrow text-primary">For founders, creators & ambitious teams</p>
+                        <h1 class="font-display text-5xl md:text-7xl lg:text-[6.6rem] font-bold leading-[.9] tracking-[-.07em] text-slate-900 dark:text-white reveal-on-scroll">Make your next <span class="home-gradient-text">move</span> impossible to miss.</h1>
+                        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl mt-8 leading-relaxed reveal-on-scroll delay-100">Ashish Manocha turns rough ideas into <strong class="text-slate-900 dark:text-white">clear stories, useful systems, and digital experiences</strong> people remember.</p>
+                        <div class="flex flex-wrap items-center gap-4 mt-10 reveal-on-scroll delay-200"><a href="work.html" class="home-primary-cta magnetic-btn">Explore the work <i class="fas fa-arrow-up-right-from-square"></i></a><a href="services.html" class="home-text-link">See capabilities <i class="fas fa-arrow-right"></i></a></div>
+                        <div class="home-hero-proof reveal-on-scroll delay-300"><span class="home-proof-number">01</span><span class="home-proof-line"></span><p>From first thought<br>to final frame.</p></div>
+                    </div>
+                    <div class="home-hero-visual reveal-on-scroll delay-200">
+                        <div class="home-visual-orbit home-visual-orbit-one"></div><div class="home-visual-orbit home-visual-orbit-two"></div>
+                        <div class="home-portrait-image"><img src="images/photo1.jpg" alt="Ashish Manocha" loading="eager" decoding="async"></div>
+                        <div class="home-float-note home-float-note-one"><span class="home-float-dot"></span> Make it useful</div><div class="home-float-note home-float-note-two">Scroll to explore <i class="fas fa-arrow-down"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-manifesto py-24 md:py-36 relative overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl"><div class="home-section-index reveal-on-scroll">02 <span>/</span> 05</div><div class="grid grid-cols-1 lg:grid-cols-[.95fr_1.05fr] gap-12 lg:gap-20 items-center"><div class="home-manifesto-visual reveal-on-scroll"><img src="images/generated-video-editing.webp" alt="Creative video editing and visual storytelling workspace" loading="lazy" decoding="async"><div class="home-manifesto-stamp"><span>POINT<br>OF<br>VIEW</span><i class="fas fa-arrow-up-right-and-arrow-down-left-from-center"></i></div></div><div><p class="eyebrow text-primary reveal-on-scroll">A point of view</p><h2 class="font-display text-4xl md:text-6xl font-bold tracking-[-.055em] text-slate-900 dark:text-white reveal-on-scroll">The best work is not louder.<br><span class="home-gradient-text">It is clearer.</span></h2><p class="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mt-8 leading-relaxed reveal-on-scroll delay-100">Attention is expensive. Clarity is magnetic. Every project starts by finding the signal inside the noise, then giving that signal a shape people can feel, use, and pass on.</p><div class="home-manifesto-notes reveal-on-scroll delay-200"><span><strong>01</strong> Find the signal</span><span><strong>02</strong> Shape the feeling</span><span><strong>03</strong> Ship the useful thing</span></div><a href="about.html" class="home-text-link mt-8 inline-flex reveal-on-scroll delay-300">Meet the studio <i class="fas fa-arrow-right"></i></a></div></div></div>
+        </section>
+        <section class="home-story-section py-24 md:py-32 bg-slate-100/70 dark:bg-white/[.035] border-y border-slate-200 dark:border-white/10 relative overflow-hidden">
+            <div class="container mx-auto px-6 max-w-6xl"><div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"><div><div class="home-section-index reveal-on-scroll">03 <span>/</span> 05</div><p class="eyebrow text-primary reveal-on-scroll">The studio in three frames</p><h2 class="font-display text-4xl md:text-5xl font-bold tracking-[-.05em] text-slate-900 dark:text-white reveal-on-scroll">Good ideas deserve<br><span class="home-gradient-text">a strong world.</span></h2></div><a href="work.html" class="home-text-link reveal-on-scroll">View selected work <i class="fas fa-arrow-right"></i></a></div>
+                <div class="home-story-grid"><a href="work.html" class="home-image-card home-image-card-large reveal-on-scroll"><img src="images/generated-nova-dashboard.webp" alt="Nova dashboard project visual" loading="lazy" decoding="async"><div class="home-image-overlay"><span>01 / Product</span><strong>Build for attention.</strong><i class="fas fa-arrow-up-right-from-square"></i></div></a><a href="work.html" class="home-image-card home-image-card-small reveal-on-scroll delay-100"><img src="images/generated-social-campaign.webp" alt="Social campaign project visual" loading="lazy" decoding="async"><div class="home-image-overlay"><span>02 / Content</span><strong>Make people feel something.</strong><i class="fas fa-arrow-up-right-from-square"></i></div></a><a href="technologies.html" class="home-image-card home-image-card-wide reveal-on-scroll delay-200"><img src="images/generated-ai-toolkit.webp" alt="AI learning toolkit visual" loading="lazy" decoding="async"><div class="home-image-overlay"><span>03 / AI education</span><strong>Teach the tool, not the jargon.</strong><i class="fas fa-arrow-up-right-from-square"></i></div></a></div>
+            </div>
+        </section>
+
+        <section class="home-principles py-24 md:py-32 relative overflow-hidden"><div class="container mx-auto px-6 max-w-6xl"><div class="home-section-index reveal-on-scroll">04 <span>/</span> 05</div><div class="grid grid-cols-1 lg:grid-cols-[.8fr_1.2fr] gap-12 items-start"><div><p class="eyebrow text-primary reveal-on-scroll">A better way to move</p><h2 class="font-display text-4xl md:text-5xl font-bold tracking-[-.05em] text-slate-900 dark:text-white reveal-on-scroll">Less handoff.<br><span class="home-gradient-text">More ownership.</span></h2><p class="text-slate-500 dark:text-slate-400 leading-relaxed mt-6 max-w-md reveal-on-scroll delay-100">One partner across strategy, visuals, content, and the tools that make the work repeatable.</p></div><div class="home-principles-list"><a href="services.html" class="home-principle reveal-on-scroll"><span>01</span><div><h3>Make the message land</h3><p>Positioning, content, posters, thumbnails, and social systems that give your idea a clear voice.</p></div><i class="fas fa-arrow-up-right-from-square"></i></a><a href="process.html" class="home-principle reveal-on-scroll delay-100"><span>02</span><div><h3>Make the experience flow</h3><p>Websites and interfaces that remove friction, guide attention, and feel good in the hand.</p></div><i class="fas fa-arrow-up-right-from-square"></i></a><a href="technologies.html" class="home-principle reveal-on-scroll delay-200"><span>03</span><div><h3>Make the tools feel human</h3><p>AI tool tutoring and practical technology teaching without the intimidating jargon.</p></div><i class="fas fa-arrow-up-right-from-square"></i></a></div></div></div></section>
+
+        <section class="home-closing py-24 md:py-36 relative overflow-hidden"><div class="home-closing-shape"></div><div class="container mx-auto px-6 max-w-6xl relative z-10"><div class="home-section-index text-white/50 reveal-on-scroll">05 <span>/</span> 05</div><div class="grid grid-cols-1 lg:grid-cols-[1.2fr_.8fr] gap-12 items-end"><div><p class="eyebrow text-white/60 reveal-on-scroll">For the next launch</p><h2 class="font-display text-5xl md:text-7xl font-bold tracking-[-.065em] text-white max-w-4xl reveal-on-scroll">Ready when<br><span class="text-blue-200">the idea is.</span></h2><p class="text-blue-100/75 text-lg max-w-xl mt-8 leading-relaxed reveal-on-scroll delay-100">Bring the messy brief, the half-formed thought, or the ambitious next move. We’ll find the shape it wants to become.</p><a href="contact.html" class="home-light-cta mt-10 inline-flex reveal-on-scroll delay-200">Start a conversation <i class="fas fa-arrow-up-right-from-square"></i></a></div><div class="home-contact-note reveal-on-scroll delay-300"><span>Direct line</span><a href="tel:+919468316226">+91 94683 16226</a><a href="mailto:ashishxengg@gmail.com">ashishxengg@gmail.com</a><small>India / Worldwide</small></div></div></div></section>
+        <footer class="standalone-footer home-footer"><span>© <span id="year">2026</span> Ashish Manocha</span><div><a href="contact.html">Start a project</a><a href="about.html">About the studio</a></div></footer>
+    </main>
+
+    <a href="https://wa.me/919468316226" target="_blank" aria-label="Chat WhatsApp" class="fixed bottom-8 right-8 z-[60] w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 hoverable magnetic-btn group">
+        <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-30 animate-ping"></span>
+        <i class="fab fa-whatsapp text-3xl leading-none z-10 group-hover:rotate-12 transition-transform"></i>
+    </a>
+
+    <button id="scrollToTopBtn" aria-label="Scroll to top" class="fixed bottom-28 right-8 z-50 w-12 h-12 bg-white dark:bg-surface border border-slate-200 dark:border-white/20 rounded-full flex items-center justify-center text-slate-600 dark:text-white shadow-lg translate-y-20 opacity-0 transition-all duration-300 hover:border-primary hover:text-primary hover:-translate-y-1 hoverable focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

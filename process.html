@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process — Ashish Manocha</title>
+    <meta name="description" content="Ashish Manocha creates bold digital experiences, social content, video, and AI-powered creative tools for ambitious brands.">
+    <meta name="keywords" content="Creative studio, UI/UX design, web development, social media management, video editing, AI tool tutoring, Ashish Manocha">
+    <meta name="author" content="Ashish Manocha">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563eb'/><text x='32' y='44' font-family='Arial,sans-serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'>A</text></svg>">
+
+    <!-- Fonts (self-hosted, no external requests) -->
+    <link rel="stylesheet" href="fonts.css">
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- External Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-dark dark:text-slate-200 transition-colors duration-500 selection:bg-primary selection:text-white overflow-x-hidden standalone-page">
+    <div class="fixed inset-0 z-[1] bg-noise pointer-events-none opacity-40 mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-0 bg-grid-pattern pointer-events-none"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[120px] pointer-events-none opacity-50 dark:opacity-20 z-0"></div>
+    <div id="preloader" class="opening-screen fixed inset-0 z-[9999] bg-slate-50 dark:bg-dark flex items-center justify-center" aria-label="Loading Ashish Manocha creative studio">
+        <div class="opening-splash">
+            <div class="opening-splash-top"><span>AM / 2026</span><span>Independent Creative Studio</span></div>
+            <div class="opening-splash-center"><span class="opening-splash-index">01</span><div class="opening-splash-name"><span>ASHISH</span><span>MANOCHA</span></div><div class="opening-splash-mark"><span>AM</span></div></div>
+            <div class="opening-splash-bottom"><span>Digital / Content / AI</span><div class="opening-meter"><span id="opening-meter-fill"></span></div><span id="opening-percent">0%</span></div>
+        </div>
+    </div>
+        <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-6">
+        <nav class="bg-white/70 dark:bg-surface/70 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-full px-6 py-3 flex items-center gap-8 shadow-sm transition-all duration-300 w-full max-w-4xl justify-between md:justify-start reveal-on-scroll">
+            
+            <a href="index.html" class="text-xl font-bold font-display tracking-tight text-slate-900 dark:text-white hoverable magnetic-btn focus:outline-none relative z-20">
+                Ashish<span class="text-primary">.</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-6 text-sm font-medium ml-auto relative z-20" id="desktop-menu">
+                <a href="index.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Home</a>
+                <a href="about.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">About</a>
+                <a href="work.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Work</a>
+                <a href="services.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Services</a>
+                <a href="process.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Process</a>
+                <a href="technologies.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Tech</a>
+                <a href="stories.html" class="nav-link text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-white transition-colors hoverable magnetic-btn">Stories</a>
+                <a href="contact.html" class="px-5 py-2 bg-slate-900 dark:bg-white text-white dark:text-black rounded-full font-bold text-xs hover:scale-105 transition-transform hoverable magnetic-btn">Hire Me</a>
+            </div>
+
+            <div class="flex items-center gap-3 md:ml-4 border-l border-slate-200 dark:border-white/10 pl-4 md:pl-6 relative z-20">
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-500 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobile-menu-btn" aria-label="Open menu" class="md:hidden text-slate-900 dark:text-white p-1 hoverable magnetic-btn focus:outline-none">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[70] bg-white/95 dark:bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-300">
+        <a href="index.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Home</a>
+        <a href="about.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">About</a>
+        <a href="services.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Services</a>
+        <a href="process.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Process</a>
+        <a href="technologies.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Tech</a>
+        <a href="work.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Work</a>
+        <a href="stories.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Stories</a>
+        <a href="contact.html" class="text-3xl font-display font-bold mobile-link hover:text-primary hoverable">Contact</a>
+        <button id="close-menu" aria-label="Close menu" class="absolute top-8 right-8 text-slate-500 hover:text-black dark:hover:text-white hoverable">
+            <i class="fas fa-times text-2xl"></i>
+        </button>
+    </div>
+
+
+    <main class="relative z-10">
+        <section class="page-hero"><div class="container mx-auto px-6 max-w-6xl"><p class="eyebrow text-primary">Ashish Manocha studio</p><h1 class="font-display text-5xl md:text-7xl font-bold text-slate-900 dark:text-white max-w-4xl">The Process</h1><p class="page-hero-copy">A focused way of working that keeps the ideas sharp and the momentum real.</p></div></section>
+        <section id="process" class="section-spy py-24 relative z-10 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-12 items-start">
+                <div class="reveal-on-scroll"><p class="eyebrow text-primary">How we work</p><h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-5">Less noise.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">More momentum.</span></h2><p class="text-slate-500 leading-relaxed max-w-md">A simple process keeps the work sharp, collaborative, and moving from first spark to final publish.</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="process-card reveal-on-scroll"><span>01</span><i class="fas fa-compass"></i><h3>Find the signal</h3><p>We clarify the audience, the opportunity, and the one message that matters most.</p></div>
+                    <div class="process-card reveal-on-scroll delay-100"><span>02</span><i class="fas fa-wand-magic-sparkles"></i><h3>Make it magnetic</h3><p>We shape the concept, system, and visuals until the idea feels impossible to ignore.</p></div>
+                    <div class="process-card reveal-on-scroll delay-200"><span>03</span><i class="fas fa-rocket"></i><h3>Ship with intent</h3><p>We polish the details, launch with confidence, and leave you with a repeatable playbook.</p></div>
+                </div>
+            </div>
+            <div class="studio-banner mt-16 reveal-on-scroll"><div><p class="eyebrow text-white/60">The studio promise</p><h3 class="text-2xl md:text-3xl font-display font-bold text-white">Big enough to think beyond the brief.<br>Focused enough to finish the details.</h3></div><a href="contact.html" class="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white text-slate-900 font-bold text-sm hover:scale-105 transition-transform">Start a conversation <i class="fas fa-arrow-up-right-from-square"></i></a></div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+<section class="page-rich-section"><div class="container mx-auto px-6 max-w-6xl"><div class="page-image-panel page-image-panel-reverse"><div class="page-image-panel-media"><img src="images/generated-video-editing.webp" alt="Video editing studio process visual" loading="lazy" decoding="async"></div><div class="page-image-panel-copy"><p class="eyebrow text-primary">The playbook</p><h2 class="font-display text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">A good process<br><span class="home-gradient-text">feels like momentum.</span></h2><p>Clarity is not a meeting. It is a sequence of small decisions that keep the work moving without losing the spark.</p><div class="page-process-steps"><div><strong>Monday</strong><span>Find the signal</span></div><div><strong>Midweek</strong><span>Make the first shape</span></div><div><strong>Friday</strong><span>Share something useful</span></div></div></div></div></div></section><section class="page-rich-section page-rich-muted"><div class="container mx-auto px-6 max-w-6xl"><div class="page-section-heading"><p class="eyebrow text-primary">What stays with you</p><h2 class="font-display text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">The work is the deliverable.<br>The clarity is the bonus.</h2></div><div class="page-card-grid"><article><span>01</span><h3>Decision trail</h3><p>You know why the direction works, not just what it looks like.</p></article><article><span>02</span><h3>Reusable system</h3><p>You get templates, rules, and assets that make the next move faster.</p></article><article><span>03</span><h3>Confident handoff</h3><p>Your team can pick up the work and keep the quality consistent.</p></article></div></div></section>
+    </main>
+    <footer class="standalone-footer"><span>© <span id="year">2026</span> Ashish Manocha</span><div><a href="contact.html">Start a project</a><a href="index.html">Back home</a></div></footer>
+    <script src="script.js"></script>
+</body>
+</html>
