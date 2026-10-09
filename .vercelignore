@@ -1,0 +1,10 @@
+# QA / review screenshots at repo root — not part of the site
+/*.png
+
+# Local archives
+ggs.zip
+
+# Tooling artifacts
+.playwright-mcp/
+.vercel/
+node_modules/
