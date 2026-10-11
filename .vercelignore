@@ -1,10 +1,26 @@
-# QA / review screenshots at repo root — not part of the site
-/*.png
+# QA / review screenshots at the repo root - not part of the site
+/after-*.png
+/final-*.png
+/home-initial.png
+/idx-*.png
+/mobile-home.png
+/pg-*.png
 
 # Local archives
 ggs.zip
 
-# Tooling artifacts
+# Tooling artifacts and one-off optimisation scripts
 .playwright-mcp/
 .vercel/
 node_modules/
+package/
+tools/
+purged/
+_iconbak/
+*.py
+lh_*.js
+font_*.js
+*.expbak
+*.precontrast
+*.part
+app.css

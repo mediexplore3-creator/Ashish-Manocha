@@ -1,13 +1,34 @@
 # Dependencies / tooling
 node_modules/
 .playwright-mcp/
+package/
+tools/
+purged/
+_iconbak/
 
 # Local archives
 ggs.zip
 
-# QA / review screenshots (not part of the site)
-# Only root-level — images/ assets are part of the site
-/*.png
+# QA / review screenshots taken at the repo root - not part of the site.
+# Scoped to the screenshot names on purpose: the old blanket `/*.png` rule was
+# also hiding the real favicon / apple-touch-icon / android-chrome PNGs, so
+# those never made it into git or the Vercel deployment.
+/after-*.png
+/final-*.png
+/home-initial.png
+/idx-*.png
+/mobile-home.png
+/pg-*.png
+
+# One-off analysis / optimisation scripts and harnesses (site has no runtime
+# Python or Node build step)
+/*.py
+/lh_*.js
+/font_*.js
+/*.expbak
+/*.precontrast
+/*.part
+/app.css
 
 # Vercel
 .vercel/
@@ -16,5 +37,4 @@ ggs.zip
 Thumbs.db
 .DS_Store
 
-.vercel
 .env*
